@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  /* # Front-end Style Guide */
+  /* ## Layout */
+  /* The designs were created to the following widths: */
+  /* - Mobile: 375px */
+  /* - Desktop: 1440px */
+
+  /* ## Colors */
+  /* ### Primary */
+  --Dark-Cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /* ### Neutral */
+  --Very-Dark-Blue: hsl(212, 21%, 14%);
+  --Dark-Grayish-Blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ## Typography */
+  /* ### Body Copy */
+  --Font-Size-Paragraph: 14px;
+
+  --font-Family-Montserrat: 'Montserrat', sans-serif; /* Weights: 500, 700 */
+  --font-Family-Fraunces: 'Fraunces', serif; /* Weights: 700 */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-Family-Montserrat);
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Cream);
+  padding: 10px;
+}
+.container {
+  width: 600px;
+  background: var(--White);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  justify-content: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+}
+.container__img {
+  width: 300px;
+  background-image: url(images/image-product-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container__information {
+  width: 300px;
+  padding: 25px 35px;
+}
+.information__product {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: var(--Dark-Cyan);
+}
+.information__name {
+  color: var(--Very-Dark-Blue);
+  font-family: var(--font-Family-Fraunces);
+  font-weight: bolder;
+  line-height: 30px;
+  margin: 20px 0;
+}
+.information__details {
+  font-size: var(--Font-Size-Paragraph);
+  color: var(--Dark-Grayish-Blue);
+  line-height: 20px;
+}
+.information__price {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.price__before {
+  font-size: 2em;
+  font-family: var(--font-Family-Fraunces);
+  color: var(--Dark-Cyan);
+}
+.price__after {
+  color: var(--Dark-Grayish-Blue);
+  text-decoration: line-through;
+  font-size: 0.8em;
+}
+.information__btn {
+  width: 100%;
+  padding: 10px 5px;
+  background: var(--Dark-Cyan);
+  border: none;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  cursor: pointer;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.information__btn:hover {
+  filter: brightness(0.75) contrast(2);
+  -webkit-filter: brightness(0.75) contrast(2);
+}
+.btn__images {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    flex-direction: column;
+  }
+  .container__img {
+    width: 100%;
+    height: 200px;
+  }
+  .container__information {
+    width: 100%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
